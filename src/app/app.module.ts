@@ -11,21 +11,29 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { CommonLayoutComponent } from './components/common-layout/common-layout.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { TruncatePipe } from './pipes/truncate.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     APIDataTableComponent,
     ErrorPageComponent,
-    CommonLayoutComponent
+    CommonLayoutComponent,
+
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatSidenavModule, 
-    MatListModule,    
-    MatToolbarModule   
+    MatSidenavModule,
+    MatListModule,
+    MatToolbarModule ,
+    ReactiveFormsModule,
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

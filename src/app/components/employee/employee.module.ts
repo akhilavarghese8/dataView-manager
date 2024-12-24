@@ -9,20 +9,31 @@ import { EmployeeListComponent } from './components/employee-list/employee-list.
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { ReactiveFormsModule } from '@angular/forms';
+import { TableModule } from 'primeng/table';
+import { TruncatePipe } from 'src/app/pipes/truncate.pipe';
+import { TooltipModule } from 'primeng/tooltip';
+import { PaginatorModule } from 'primeng/paginator';
+
 
 
 @NgModule({
   declarations: [
     EmployeeComponent,
     EmployeeAddComponent,
-    EmployeeListComponent
+    EmployeeListComponent,
+    TruncatePipe
   ],
   imports: [
     CommonModule,
     EmployeeRoutingModule,
-    MatSidenavModule, 
-    MatListModule,    
-    MatToolbarModule 
+    MatSidenavModule,
+    MatListModule,
+    MatToolbarModule ,
+    ReactiveFormsModule,
+    TableModule,
+    TooltipModule,
+    PaginatorModule
   ]
 })
 export class EmployeeModule { }
